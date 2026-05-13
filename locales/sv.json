@@ -1,5 +1,14 @@
 {
   "HomePage": {
     "title": "Hej världen!"
+  },
+  "Navbar": {
+    "title": "Klassisk Bilhandlare",
+    "home": "Hem",
+    "templates": "Mallar",
+    "features": "Funktioner",
+    "howItWorks": "Hur det fungerar",
+    "login": "Logga in",
+    "getStarted": "Kom igång"
   }
 }

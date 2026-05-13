@@ -1,5 +1,14 @@
 {
   "HomePage": {
     "title": "Hello world!"
+  },
+  "Navbar": {
+    "title": "Classic Car Dealer",
+    "home": "Home",
+    "templates": "Templates",
+    "features": "Features",
+    "howItWorks": "How it works",
+    "login": "Log in",
+    "getStarted": "Get started"
   }
 }
