@@ -3,7 +3,8 @@ import { Poppins, Manrope } from "next/font/google";
 import { NextFont } from "next/dist/compiled/@next/font";
 import "./globals.css";
 import { NextIntlClientProvider } from "next-intl";
-import Navbar from "@/components/layout/Navbar";
+import Navbar from "@/components/layout/navbar";
+import { CookiesProvider } from "next-client-cookies/server";
 
 const poppins: NextFont = Poppins({
   weight: ["400", "600"],
@@ -32,10 +33,12 @@ export default function RootLayout({
       className={`${poppins.className} ${manrope.className} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
-        <NextIntlClientProvider>
-          <Navbar />
-          {children}
-        </NextIntlClientProvider>
+        <CookiesProvider>
+          <NextIntlClientProvider>
+            <Navbar />
+            {children}
+          </NextIntlClientProvider>
+        </CookiesProvider>
       </body>
     </html>
   );
