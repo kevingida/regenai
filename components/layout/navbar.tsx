@@ -84,8 +84,17 @@ const Navbar = () => {
         isBgColour ? "bg-transparent" : "bg-accent/90"
       }`}
     >
-      <Link href="/">
-        <h1>{t("title")}</h1>
+      <Link href="/" className="flex items-center gap-3">
+        {/* LOGO */}
+        <div className="flex items-center gap-3">
+          <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-linear-to-br from-orange-500 to-orange-400 shadow-md">
+            <div className="h-5 w-5 rounded-md bg-white" />
+          </div>
+
+          <span className="text-3xl font-bold tracking-tight text-neutral-900">
+            <h1>{t("title")}</h1>
+          </span>
+        </div>
         {/* <Image
           src="/logo.svg"
           alt="Classic Car Dealer Logo"
