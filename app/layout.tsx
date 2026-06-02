@@ -5,6 +5,13 @@ import "./globals.css";
 import { NextIntlClientProvider } from "next-intl";
 import Navbar from "@/components/layout/navbar";
 import { CookiesProvider } from "next-client-cookies/server";
+import {
+  ClerkProvider,
+  Show,
+  SignInButton,
+  SignUpButton,
+  UserButton,
+} from "@clerk/nextjs";
 
 const poppins: NextFont = Poppins({
   weight: ["400", "600"],
@@ -35,8 +42,10 @@ export default function RootLayout({
       <body className="min-h-full flex flex-col">
         <CookiesProvider>
           <NextIntlClientProvider>
-            <Navbar />
-            {children}
+            <ClerkProvider>
+              <Navbar />
+              {children}
+            </ClerkProvider>
           </NextIntlClientProvider>
         </CookiesProvider>
       </body>
