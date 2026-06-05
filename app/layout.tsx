@@ -40,14 +40,14 @@ export default function RootLayout({
       className={`${poppins.className} ${manrope.className} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
-        <CookiesProvider>
-          <NextIntlClientProvider>
+        <NextIntlClientProvider>
+          <CookiesProvider>
             <ClerkProvider>
               <Navbar />
               {children}
             </ClerkProvider>
-          </NextIntlClientProvider>
-        </CookiesProvider>
+          </CookiesProvider>
+        </NextIntlClientProvider>
       </body>
     </html>
   );
